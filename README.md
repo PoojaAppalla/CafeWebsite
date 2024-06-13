@@ -5,9 +5,9 @@ Welcome to my cafe website project repository! This project showcases a fully fu
 ## Features
 
 - **Navigation Tabs**: For simple navigation, use the Home, About, Menu, Review, Contact, and Blogs tabs.
-- **material Sections**: Every tab contains unique material, including information about the menu, client testimonials, contact data, and blog entries.
+- **material Sections**: Every tab contains respective information, including the menu, About, contact data, and blog entries.
 - **Interactive Experience**: Improves user experience by using JavaScript to enable interactive tab switching.
-- **Responsive Design**: CSS was used throughout design to ensure best viewing experience on various devices.
+- **Responsive Design**: CSS was used throughout design to ensure viewing experience.
 
 ## Usage
 
