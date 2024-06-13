@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="script.js"></script>
+    <style>
+	
+	body {
+            background-color: black;
+            color: white;
+        }
+        
+        .nav {
+
+        position: -webkit-sticky;
+        Position:sticky;
+        top: 0;
+        width: 100%;
+        background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+        font-family: Arial, sans-serif;
+        padding: 10px 0;
+        text-align: center;
+        justify-content: center;
+        z-index: 1000;
+        }
+
+        .nav a {
+        color: white;
+        text-decoration: none;
+        padding: 14px 20px;
+        display: inline-block;
+        }
+
+        .nav a:hover {
+        background-color: rgba(255, 255, 255, 0.3);
+        }
+
+       .cart-card {
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            margin: 10px;
+            padding: 10px;
+            width: 110%;
+            max-width: 500px;
+            height: 250px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+            font-family: Arial, sans-serif;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+        .cart-card img {
+            width: 170px;
+            height: 90%;
+            object-fit: cover;
+            border-radius: 5px;
+            margin-right: 10px;
+        }
+        .cart-card-content {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            flex-grow: 1;
+        }
+        .price {
+            color: white;
+        }
+	
+	   .cart-items-container {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+        }
+        .cart-icon {
+            position: relative;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: 5px;
+            /* right: 10px; */
+            background: red;
+            color: white;
+            border-radius: 50%;
+            padding: 2px 4px;
+            margin-top: 2px;
+            font-size: 10px;
+        }
+        .cart-items-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* 1 row with 2 equal columns */
+            gap: 5px; /* Space between items */
+        }
+
+        .cart-item-info {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .cart-item-info img {
+            width: 150px; /* Adjust as needed */
+            height: 150px; /* Maintain aspect ratio */
+        }
+
+        .checkout-button {
+            display: block;
+            width: 200px;
+            padding: 10px 20px;
+            margin: 20px auto;
+            text-align: center;
+            background-color: #CD7F32;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            font-size: 16px;
+            cursor: pointer;
+        }
+        
+
+        .btn-remove-from-cart {
+            background-color:#CD7F32;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            margin-top: 10px;
+        }
+
+        .btn-remove-from-cart:hover {
+            background-color: #0056b3;
+        }
+
+
+    </style>
+</head>
+<body>
+
+    <div class="nav">
+        <a href="index.htm#home">Home</a>
+        <a href="index.htm#about">About</a>
+        <a href="menu.htm">Menu</a>
+        <!-- <a href="products.html">Products</a> -->
+        <a href="review.htm">Review</a>
+        <a href="contact.htm">Contact</a>
+        <a href="blog.htm">Blogs</a>
+        <a href="cart.htm" style="margin-left: 20px;">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count" id="cart-count">0</span> 
+        </a>
+        
+    </div>
+
+    <h1>Your Cart</h1>
+     <!-- Cart items container -->
+     <div id="cart-items" class="cart-items-container">
+        <!-- Cart items will be dynamically inserted here -->
+    </div>
+    <!-- Checkout button -->
+    <button class="checkout-button" onclick="location.href='bill.htm';">Checkout</button>
+</body>
+</html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beyond Caffeine</title>
+    <title>Bakery Website</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="script.js"></script>
+    <style>
+	
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 100%;
+            font-family: Arial, sans-serif;
+        }
+
+        .background {
+            background-image: url('coffee.jpeg'); /* Replace with your image URL */
+            height: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            color: white;
+        }
+
+        .nav {
+
+            position: -webkit-sticky;
+            Position:sticky;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: inline-block;
+        }
+
+        .nav a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .text-overlay {
+            position: absolute;
+            top: 50%;
+            right: 10%;
+            transform: translateY(-50%);
+            text-align: right;
+        }
+
+        .text-overlay h2 {
+            font-size: 3em;
+            margin: 0;
+        }
+
+        .text-overlay h1{
+            font-size: 3em;
+	    margin: 0;
+        }
+        .cart-icon {
+            position: relative;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: 5px;
+            /* right: 10px; */
+            background: red;
+            color: white;
+            border-radius: 50%;
+            padding: 2px 4px;
+            margin-top: 2px;
+            font-size: 10px;
+        }
+	
+	.about-section {
+            display: block;
+            padding: 50px;
+            background: black;
+            color: white;
+            text-align: center;
+            font-family: 'Roboto', sans-serif;
+        }
+	
+	.about-section iframe {
+            margin-top: 20px;
+            width: 80%;
+            height: 450px;
+            border: none;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="background">
+        <div class="nav">
+            <a href="#home">Home</a>
+            <a href="#about">About</a>
+            <a href="menu.htm">Menu</a>
+            <a href="review.htm">Review</a>
+            <a href="contact.htm">Contact</a>
+            <a href="blog.htm">Blogs</a>
+            <a href="cart.htm" style="margin-left: 20px;">
+                <i class="fas fa-shopping-cart"></i>
+        		<span class="cart-count" id="cart-count">0</span> 
+    	    </a>	    
+
+        </div>
+        <div class="text-overlay">
+            <h2> Life is Good </h2>
+            <h1>Coffee makes it better</h1>
+        </div>
+    </div>
+<div class="content-wrapper">
+        <div class="about-section" id="about">
+           <h2>About Our Coffee</h2>
+            <p>Discover the rich history behind your favorite brew! Did you know coffee is the second most traded commodity in the world? At our bakery, we offer a diverse selection of coffee powders made from beans sourced globally, each with its unique flavor profile. Whether you prefer the robust taste of Arabica or the bold notes of Robusta, we have something to satisfy every coffee lover's palate.</p>
+            <p>At our cafe, we believe in the art of brewing coffee and the joy it brings to our customers. Our team of skilled baristas work tirelessly to create a welcoming atmosphere where you can enjoy a moment of peace with your favorite brew. Whether you're looking for a quick coffee on the go or a place to unwind with friends, we've got you covered.</p>
+            <p>We pride ourselves on our commitment to quality and customer satisfaction. Our menu features a wide variety of coffee options, including single-origin and blends, to cater to all tastes. Join us for a cup of your favorite coffee and indulge in the delightful flavors we have to offer.</p>
+		
+	   <iframe width="560" height="315" src="https://www.youtube.com/embed/lAd3LYIZMjs?si=v2QtLdvhP_s3Wr2G" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Great+Vibes&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <script src="script.js"></script>
+    <!-- Include any other necessary stylesheets or scripts -->
+    <style>
+
+	body {
+            background-color: black;
+            color: white;
+            min-height: 100vh;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            text-align: center;
+        }	
+        .nav {
+            position: -webkit-sticky;
+            position: sticky;
+            top: 0;
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            padding: 10px 0;
+            text-align: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: inline-block;
+        }
+
+        .nav a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+
+        .menu-card {
+            margin-bottom: 20px;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            padding: 10px;
+        }
+
+        .menu-card img {
+            max-width: 100%;
+            height: auto; /* Allow images to adjust height within the card */
+            object-fit: cover; /* Ensure images cover the entire container */
+            border-radius: 5px;
+        }
+
+        .menu-card .card-body {
+            text-align: center;
+        }
+
+        .menu-card .card-title {
+            font-size: 1.5em;
+            margin-bottom: 10px;
+        }
+
+        .menu-card .price {
+            font-size: 1.2em;
+            color: green;
+            margin-bottom: 10px;
+        }
+
+        .menu-card .btn-add-to-cart {
+            background-color: #CD7F32;
+            color: white;
+            border: none;
+            padding: 5px 10px;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .btn-add-to-cart:hover {
+            background-color: #0056b3;
+        }
+
+        h1 {
+            margin-top: 4rem;
+            margin-bottom: 4rem;
+        }
+
+        .cart-icon {
+            position: relative;
+        }
+
+        .cart-count {
+            position: absolute;
+            top: 5px;
+            right: 10px;
+            background: red;
+            color: white;
+            border-radius: 50%;
+            padding: 2px 4px;
+            margin-top: 2px;
+            font-size: 10px;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="index.htm#home">Home</a>
+        <a href="index.htm#about">About</a>
+        <a href="menu.htm">Menu</a>
+        <a href="review.htm">Review</a>
+        <a href="contact.htm">Contact</a>
+        <a href="blog.htm">Blogs</a>
+        <a href="cart.htm" style="margin-left: 20px;" class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count" id="cart-count">0</span>
+        </a>
+    </div>
+    <div class="container">
+        <h1 class="mt-4 mb-4">Menu</h1>
+	
+        <div class="row">
+            <div class="col-md-4">
+                <div class="menu-card" style="height: 400px;">
+                    <img src="mocha.jpeg" alt="Mocha" class="img-fluid" style="width: 100%; height: 250px;">
+                    <div class="card-body">
+                        <h2 class="card-title">Mocha</h2>
+                        <p class="price">$3.99</p>
+                        <button class="btn btn-add-to-cart" onclick="addToCart('Mocha', 3.99, 'mocha.jpeg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Add more cards for other menu items -->
+
+            <div class="col-md-4" style="height: 400px;">
+                <div class="menu-card">
+                    <img src="cap.jpeg" alt="Cappuccino" class="img-fluid" style="width: 100%; height: 230px;">
+                    <div class="card-body">
+                        <h2 class="card-title">Cappuccino</h2>
+                        <p class="price">$4.99</p>
+                         <button class="btn btn-add-to-cart" onclick="addToCart('Cappuccino', 4.99, 'cap.jpeg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+	    
+	    <div class="col-md-4">
+                <div class="menu-card" style="height: 400px;">
+                    <img src="car.jpeg" alt="Caramel Macchiato" class="img-fluid" style="width: 100%; height: 250px;">
+                    <div class="card-body">
+                        <h2 class="card-title">Caramel Macchiato</h2>
+                        <p class="price">$4.99</p>
+                         <button class="btn btn-add-to-cart" onclick="addToCart('Caramel Macchiato', 4.99, 'car.jpeg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+	    <div class="col-md-4">
+                <div class="menu-card" style="height: 400px;">
+                    <img src="latte.jpeg" alt="Cafe Latte" class="img-fluid" style="width: 100%; height: 250px;">
+                    <div class="card-body">
+                        <h2 class="card-title">Cafe Latte</h2>
+                        <p class="price">$4.99</p>
+                         <button class="btn btn-add-to-cart" onclick="addToCart('Cafe Latte', 4.99, 'latte.jpeg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+	     <div class="col-md-4">
+                <div class="menu-card" style="height: 400px;">
+                    <img src="black.jpeg" alt="Black Coffee" class="img-fluid" style="width: 100%; height: 250px;">
+                    <div class="card-body">
+                        <h2 class="card-title">Black Coffee</h2>
+                        <p class="price">$5.99</p>
+                         <button class="btn btn-add-to-cart" onclick="addToCart('Black Coffee', 5.99, 'black.jpeg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-md-4">
+                <div class="menu-card" style="height: 400px;">
+                    <img src="espresso.jpeg" alt="Espresso" class="img-fluid" style="width: 100%; height: 250px;">
+                    <div class="card-body">
+                        <h2 class="card-title">Espresso</h2>
+                        <p class="price">$3.99</p>
+                        <button class="btn btn-add-to-cart" onclick="addToCart('Espresso', 3.99, 'espresso.jpeg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+	   
+	     <div class="col-md-4">
+                <div class="menu-card" style="height: 400px;">
+                    <img src="frap.jpeg" alt="Caramel Frappuccino" class="img-fluid" style="width: 100%; height: 250px;">
+                    <div class="card-body">
+                        <h2 class="card-title">Caramel Frappuccino</h2>
+                        <p class="price">$5.99</p>
+                         <button class="btn btn-add-to-cart" onclick="addToCart('Caramel Frappuccino', 5.99, 'frap.jpeg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+	     <div class="col-md-4">
+                <div class="menu-card" style="height: 400px;">
+                    <img src="mocha-frap.jpeg" alt="Mocha Frappuccino" class="img-fluid" style="width: 100%; height: 250px;">
+                    <div class="card-body">
+                        <h2 class="card-title">Mocha Frappuccino</h2>
+                        <p class="price">$5.99</p>
+                         <button class="btn btn-add-to-cart" onclick="addToCart('Mocha Frappuccino', 5.99, 'mocha-frap.jpeg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+
+	    <div class="col-md-4">
+                <div class="menu-card" style="height: 400px;">
+                    <img src="irish.jpeg" alt="Irish Coffee" class="img-fluid" style="width: 100%; height: 250px;">
+                    <div class="card-body">
+                        <h2 class="card-title">Irish Coffee</h2>
+                        <p class="price">$4.99</p>
+                         <button class="btn btn-add-to-cart" onclick="addToCart('Irish Coffee', 4.99, 'irish.jpeg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+	    
+	    <div class="col-md-4">
+                <div class="menu-card" style="height: 400px;">
+                    <img src="white.jpeg" alt="Caffe Mocha" class="img-fluid" style="width: 100%; height: 250px;">
+                    <div class="card-body">
+                        <h2 class="card-title">White Choclate Mocha</h2>
+                        <p class="price">$4.99</p>
+                         <button class="btn btn-add-to-cart" onclick="addToCart('Caffe Mocha', 4.99, 'mocch.jpeg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+	    
+	    <div class="col-md-4">
+                <div class="menu-card" style="height: 400px;">
+                    <img src="americano.jpeg" alt="Cafe Americano" class="img-fluid" style="width: 100%; height: 250px;">
+                    <div class="card-body">
+                        <h2 class="card-title">Americano</h2>
+                        <p class="price">$5.99</p>
+                         <button class="btn btn-add-to-cart" onclick="addToCart('Cafe Americano', 5.99, 'americano.jpeg')">Add to Cart</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment Success</title>
+    <script src="script.js"></script>
+    <style>
+        body {
+            background-image: url('bg.jpeg');
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            position: relative;
+            color: white;
+            font-family: Arial, sans-serif;
+            display: flex;
+            flex-direction: column; /* Stack elements vertically */
+            align-items: center; /* Center horizontally */
+            justify-content: center; /* Center vertically */
+            height: 100vh;
+            margin: 0;
+        }
+    
+        .nav {
+            position: fixed; /* Fixed position to stay at the top */
+            top: 0;
+            left: 0; /* Align to the left */
+            width: 100%;
+            background: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+            font-family: Arial, sans-serif;
+            padding: 10px 0;
+            text-align: center;
+            z-index: 1000;
+        }
+    
+        .nav a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+        }
+    
+        .nav a:hover {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+    
+        .card {
+            max-width: 600px;
+            width: 100%;
+            padding: 20px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 5px;
+            text-align: center;
+            margin-bottom: 500px; /* Adjust margin to separate from the navbar */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add shadow for depth */
+        }
+
+        .cart-icon {
+            position: relative;
+            color:yellow
+        }
+
+        .cart-count {
+            position: absolute;
+            top: 5px;
+            /* right: 10px; */
+            background: red;
+            color: white;
+            border-radius: 50%;
+            padding: 2px 4px;
+            margin-top: 2px;
+            font-size: 10px;
+        }
+	
+    </style>
+    
+</head>
+
+<body>
+
+    <div class="nav">
+        <a href="index.htm#home">Home</a>
+        <a href="index.htm#about">About</a>
+        <a href="menu.htm">Menu</a>
+        <a href="review.htm">Review</a>
+        <a href="contact.htm">Contact</a>
+        <a href="blog.htm">Blogs</a>
+        <a href="cart.htm" style="margin-left: 20px;" class="cart-icon">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count" id="cart-count">0</span>
+        </a>
+       
+    </div>
+
+    <div class="card">
+        <h1>Order Successful</h1>
+    </div>
+</body>
+
+</html>
